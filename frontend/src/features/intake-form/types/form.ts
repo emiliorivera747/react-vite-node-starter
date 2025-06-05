@@ -1,6 +1,6 @@
 import type React from "react";
 
-export type Section = {
+export interface Section {
     title: string;
     content: React.ReactNode;
 }

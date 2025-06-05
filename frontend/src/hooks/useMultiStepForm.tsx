@@ -10,7 +10,6 @@ import { useState } from "react";
 function useMultiStepForm<T>(sections: T[]) {
   const [index, setIndex] = useState<number>(0);
 
-
   /**
    * Move to next section
    */
