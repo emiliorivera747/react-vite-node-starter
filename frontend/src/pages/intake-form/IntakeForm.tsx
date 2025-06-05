@@ -44,7 +44,7 @@ function IntakeForm() {
     <div>
       <Progress value={progress} className="w-full" />
       <div className="py-4 flex w-full justify-end text-[##868e96]">
-        {progress} %
+        {Math.round(progress)} %
       </div>
       <Form {...form}>
         <form
