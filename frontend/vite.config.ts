@@ -17,8 +17,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // Or just './src' if it's relative to vite.config.js
+      '@': path.resolve(__dirname, './src'),
     }
   }
-  
 });

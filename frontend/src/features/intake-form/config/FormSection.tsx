@@ -1,10 +1,7 @@
 import type { Section } from "@/features/intake-form/types/form";
 
-import ReviewSection from "@/features/intake-form/components/ReviewSection";
-
 import {
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,10 +13,9 @@ import type { FieldValues, Control, Path } from "react-hook-form";
 export const getSections = <T extends FieldValues>(
   control: Control<T>
 ): Section[] => {
-
   return [
     {
-      title: "Personal Information",
+      title: "What is your full name?",
       content: (
         <FormField<T, Path<T>>
           name={"fullName" as Path<T>}
@@ -27,8 +23,8 @@ export const getSections = <T extends FieldValues>(
           render={({ field }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>
-              <FormControl className="rounded-[12px] p-2 py-3 border">
-                <input placeholder="John Doe" {...field} />
+              <FormControl className="rounded-[12px] px-[1rem] py-[1rem] border">
+                <input className=""placeholder="John Doe" {...field}  />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -37,15 +33,15 @@ export const getSections = <T extends FieldValues>(
       ),
     },
     {
-      title: "Address",
+      title: "What is your Address?",
       content: (
         <FormField<T, Path<T>>
           name={"address" as Path<T>}
           control={control as Control<T>}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Address</FormLabel>
-              <FormControl className="rounded-[12px] p-2 py-3 border">
+              <FormLabel className="">Address</FormLabel>
+              <FormControl className="rounded-[12px]  px-[1rem] py-[1rem] border">
                 <input placeholder="770 Saratoga Ave" {...field} />
               </FormControl>
               <FormMessage />
@@ -53,10 +49,6 @@ export const getSections = <T extends FieldValues>(
           )}
         />
       ),
-    },
-    {
-      title: "Review Your Information",
-      content: <ReviewSection />,
     },
   ];
 };

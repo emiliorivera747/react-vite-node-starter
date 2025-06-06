@@ -19,6 +19,7 @@ import { Form } from "@/components/ui/form";
  */
 function IntakeForm() {
   const [progress, setProgress] = useState(0);
+
   const sections = getSections<IntakeFormSchema>(
     useForm<IntakeFormSchema>().control
   );
@@ -41,9 +42,9 @@ function IntakeForm() {
   };
 
   return (
-    <div>
-      <Progress value={progress} className="w-full" />
-      <div className="py-4 flex w-full justify-end text-[##868e96]">
+    <section className="w-screen h-screen ">
+      <Progress value={progress} className="[&>*]:bg-[#7755cc]" />
+      <div className="py-2 flex w-full justify-end text-[#495057] px-8 font-light">
         {Math.round(progress)} %
       </div>
       <Form {...form}>
@@ -51,8 +52,8 @@ function IntakeForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className="py-10 h-[50vh] w-full flex items-start justify-center"
         >
-          <div className="w-[50%] grid grid-rows-[5rem_1fr_3rem] h-full">
-            <h1 className="text-2xl font-bold text-center">
+          <div className="w-[35rem] grid grid-rows-[5rem_1fr_3rem] h-full">
+            <h1 className="text-3xl font-bold text-center text-[#343a40] ">
               {currentSection && currentSection.title}
             </h1>
 
@@ -62,7 +63,7 @@ function IntakeForm() {
             {/* PREVIOUS */}
             <div className="flex w-full justify-between">
               <button
-                className={` hover:bg-[#f1f3f5] border rounded-full flex items-center justify-center p-4 text-black ${
+                className={` shadow-2xs hover:bg-[#f1f3f5] border rounded-full flex items-center justify-center p-4 text-black ${
                   index === 0 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 onClick={prev}
@@ -87,7 +88,7 @@ function IntakeForm() {
               {/* NEXT */}
               {index !== sections.length - 1 && (
                 <button
-                  className=" hover:bg-[#f1f3f5] border rounded-full flex items-center justify-center p-4 text-black"
+                  className=" shadow-2xs hover:bg-[#f1f3f5] border rounded-full flex items-center justify-center p-4 text-black"
                   onClick={next}
                   disabled={index === sections.length - 1}
                 >
@@ -112,7 +113,7 @@ function IntakeForm() {
               {index === sections.length - 1 && (
                 <button
                   type="submit"
-                  className="bg-green-500 rounded-[12px] px-4 text-white py-2"
+                  className="bg-[#7755cc] rounded-[12px] px-4 text-white py-2"
                 >
                   Submit
                 </button>
@@ -121,7 +122,7 @@ function IntakeForm() {
           </div>
         </form>
       </Form>
-    </div>
+    </section>
   );
 }
 
