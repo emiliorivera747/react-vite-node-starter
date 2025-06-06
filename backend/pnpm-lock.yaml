@@ -27,6 +27,9 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
     devDependencies:
+      '@types/dotenv':
+        specifier: ^6.1.1
+        version: 6.1.1
       '@types/express':
         specifier: ^5.0.2
         version: 5.0.2
@@ -118,6 +121,9 @@ packages:
 
   '@types/cors@2.8.18':
     resolution: {integrity: sha512-nX3d0sxJW41CqQvfOzVG1NCTXfFDrDWIghCZncpHeWlVFd81zxB/DLhg7avFg6eHLCRX7ckBmoIIcqa++upvJA==}
+
+  '@types/dotenv@6.1.1':
+    resolution: {integrity: sha512-ftQl3DtBvqHl9L16tpqqzA4YzCSXZfi7g8cQceTz5rOlYtk/IZbFjAv3mLOQlNIgOaylCQWQoBdDQHPgEBJPHg==}
 
   '@types/express-serve-static-core@5.0.6':
     resolution: {integrity: sha512-3xhRnjJPkULekpSzgtoNYYcTWgEZkp4myc+Saevii5JPnHNvHMRlBSHDbs7Bh1iPPoVTERHEZXyhyLbMEsExsA==}
@@ -656,6 +662,10 @@ snapshots:
       '@types/node': 22.15.30
 
   '@types/cors@2.8.18':
+    dependencies:
+      '@types/node': 22.15.30
+
+  '@types/dotenv@6.1.1':
     dependencies:
       '@types/node': 22.15.30
 
