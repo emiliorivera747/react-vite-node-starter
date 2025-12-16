@@ -10,7 +10,7 @@ If you're looking to get started with Vite and Node.js, you've come to the right
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<your-username>/react-vite-node-starter.git
+   https://github.com/emiliorivera747/react-vite-node-starter.git
    ```
    ```bash
    cd react-vite-node-starter/
